@@ -8,3 +8,4 @@ and the 'w' and 's' keys to increment or decrement the digit at the current curs
 
 Attempts are timed.
 The game will reset with a new lock code after each reset.
+Press ESC, ENTER, SPACE to reset the timer and get a new random two-letter combination.
