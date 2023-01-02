@@ -1,7 +1,7 @@
 # amok-runner-foen-lock
-Amok Runner FOEN Puzzle practice for speedrunning
+Amok Runner FOEN puzzle practice for speedrunning
 
-This is a simple Pygame-based python program.
+This is a simple pygame-based python program that simulates the 4-number lock in Amok Runner.
 The player can use the 'a' and 'd' keys to move the cursor left and right, respectively, 
 and the 'w' and 's' keys to increment or decrement the digit at the current cursor position. 
 
