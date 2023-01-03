@@ -31,12 +31,12 @@ async def main():
     running = True
 
     # all possibilities
-    two_letters = ['ON', 'NF', 'NO', 'FO', 'FN']
-    two_letter_code = [[5, 8, 6, 1], [8, 1, 6, 5], [8, 5, 6, 1], [1, 5, 6, 8], [1, 8, 5, 6]]
+    four_letters = ['ONEF', 'NFEO', 'NOEF', 'FOEN', 'FNOE']
+    four_letter_code = [[5, 8, 6, 1], [8, 1, 6, 5], [8, 5, 6, 1], [1, 5, 6, 8], [1, 8, 5, 6]]
 
     # Set up the lock code
-    letters = random.choice(two_letters)
-    lock_code = two_letter_code[two_letters.index(letters)]
+    letters = random.choice(four_letters)
+    lock_code = four_letter_code[four_letters.index(letters)]
 
     # Set up the current guess (starting position)
     guess = [0, 0, 0, 0]
@@ -51,8 +51,8 @@ async def main():
                     guess = [0, 0, 0, 0]
                     cursor_pos = 0
                     solved = False
-                    letters = random.choice(two_letters)
-                    lock_code = two_letter_code[two_letters.index(letters)]
+                    letters = random.choice(four_letters)
+                    lock_code = four_letter_code[four_letters.index(letters)]
                     start_time = time.time()
                 elif event.key == pygame.K_s:
                     # Increment the current guess at the cursor position
@@ -105,10 +105,10 @@ async def main():
         pygame.draw.rect(screen, (0, 0, 0), (cursor_x, cursor_y, cursor_width, cursor_height), 2)
 
         # Render "ESC to reset" text
-        reset_text = font.render("ON - 5861, NF - 8165, NO - 8561, FO - 1568, FN - 1856", True, (0, 0, 0))
-        reset_text_rect = reset_text.get_rect()
-        reset_text_rect.center = (SCREEN_WIDTH / 2, SCREEN_HEIGHT * 7 / 8)
-        screen.blit(reset_text, reset_text_rect)
+        # reset_text = font.render("ON - 5861, NF - 8165, NO - 8561, FO - 1568, FN - 1856", True, (0, 0, 0))
+        # reset_text_rect = reset_text.get_rect()
+        # reset_text_rect.center = (SCREEN_WIDTH / 2, SCREEN_HEIGHT * 7 / 8)
+        # screen.blit(reset_text, reset_text_rect)
 
         # Render the timer
         if not solved:
