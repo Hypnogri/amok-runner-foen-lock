@@ -1,0 +1,3 @@
+Followed this tutorial: https://www.youtube.com/watch?v=6PhDmpBcezQ&ab_channel=FinFET
+
+Note: make sure py file is named "main.py"
